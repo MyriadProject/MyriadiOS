@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3378A7BE19154DDF0080E88A /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 3378A7BC19154DDF0080E88A /* BLE.m */; };
+		AF147F9819154E9800D227C4 /* MYDevicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF147F9719154E9800D227C4 /* MYDevicesViewController.m */; };
+		AF147F9B19154EC200D227C4 /* MYWorkflowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF147F9A19154EC200D227C4 /* MYWorkflowsViewController.m */; };
 		AF19AB3F19148BB100A43EDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF19AB3E19148BB100A43EDD /* Foundation.framework */; };
 		AF19AB4119148BB100A43EDD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF19AB4019148BB100A43EDD /* CoreGraphics.framework */; };
 		AF19AB4319148BB100A43EDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF19AB4219148BB100A43EDD /* UIKit.framework */; };
@@ -41,6 +43,10 @@
 		3378A7BB19154DDF0080E88A /* BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLE.h; sourceTree = "<group>"; };
 		3378A7BC19154DDF0080E88A /* BLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLE.m; sourceTree = "<group>"; };
 		3378A7BD19154DDF0080E88A /* BLEDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDefines.h; sourceTree = "<group>"; };
+		AF147F9619154E9800D227C4 /* MYDevicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYDevicesViewController.h; sourceTree = "<group>"; };
+		AF147F9719154E9800D227C4 /* MYDevicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYDevicesViewController.m; sourceTree = "<group>"; };
+		AF147F9919154EC200D227C4 /* MYWorkflowsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYWorkflowsViewController.h; sourceTree = "<group>"; };
+		AF147F9A19154EC200D227C4 /* MYWorkflowsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYWorkflowsViewController.m; sourceTree = "<group>"; };
 		AF19AB3B19148BB100A43EDD /* Myriad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Myriad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF19AB3E19148BB100A43EDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AF19AB4019148BB100A43EDD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -141,6 +147,10 @@
 				AF19AB4D19148BB100A43EDD /* MYAppDelegate.h */,
 				AF19AB4E19148BB100A43EDD /* MYAppDelegate.m */,
 				AF19AB5019148BB100A43EDD /* Main.storyboard */,
+				AF147F9919154EC200D227C4 /* MYWorkflowsViewController.h */,
+				AF147F9A19154EC200D227C4 /* MYWorkflowsViewController.m */,
+				AF147F9619154E9800D227C4 /* MYDevicesViewController.h */,
+				AF147F9719154E9800D227C4 /* MYDevicesViewController.m */,
 				AF79C8C61915383C0056BFEE /* MYLoadingViewController.h */,
 				AF79C8C71915383C0056BFEE /* MYLoadingViewController.m */,
 				AF19AB5919148BB100A43EDD /* Images.xcassets */,
@@ -294,7 +304,9 @@
 				AF79C8D019153CB70056BFEE /* FBShimmeringLayer.m in Sources */,
 				AF19AB4F19148BB100A43EDD /* MYAppDelegate.m in Sources */,
 				3378A7BE19154DDF0080E88A /* BLE.m in Sources */,
+				AF147F9819154E9800D227C4 /* MYDevicesViewController.m in Sources */,
 				AF79C8D119153CB70056BFEE /* FBShimmeringView.m in Sources */,
+				AF147F9B19154EC200D227C4 /* MYWorkflowsViewController.m in Sources */,
 				AF79C8C81915383C0056BFEE /* MYLoadingViewController.m in Sources */,
 				AF19AB4B19148BB100A43EDD /* main.m in Sources */,
 			);
