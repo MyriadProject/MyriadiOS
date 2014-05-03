@@ -1,12 +1,12 @@
 [
 	{
-		"name" : "test device",
+		"name" : "Apple TV",
 		"commands" :
 		[
 			{
-				"name" : "buzz",
+				"name" : "Menu",
 				"device_protocol" : 1,
-				"hash" : 1234,
+				"hash" : "77E1C0DA",
 				"bits" : 32
 			}
 		]

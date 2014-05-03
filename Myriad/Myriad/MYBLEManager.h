@@ -15,5 +15,5 @@
 
 - (void)scanForPeripherals;
 - (NSArray *)knownDevices;
-
+- (void) sendString:(NSString *)string;
 @end
