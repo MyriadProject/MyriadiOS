@@ -1,0 +1,14 @@
+[
+	{
+		"name" : "test device",
+		"commands" :
+		[
+			{
+				"name" : "buzz",
+				"device_protocol" : 1,
+				"hash" : 1234,
+				"bits" : 32
+			}
+		]
+	}
+]
