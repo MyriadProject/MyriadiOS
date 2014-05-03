@@ -24,6 +24,8 @@
 -(void) bleDidDisconnect;
 -(void) bleDidUpdateRSSI:(NSNumber *) rssi;
 -(void) bleDidReceiveData:(unsigned char *) data length:(int) length;
+// Myriad Edits
+-(void) bleForwardCentralManagerDidUpdateState:(CBCentralManager *)centralManager;
 @required
 @end
 

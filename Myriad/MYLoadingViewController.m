@@ -65,6 +65,11 @@
     _logoLabel.textAlignment = NSTextAlignmentCenter;
     _logoLabel.backgroundColor = [UIColor clearColor];
     _shimmeringView.contentView = _logoLabel;
+    
+    // BLE
+    self.ble = [[BLE alloc] init];
+    [self.ble controlSetup];
+    self.ble.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -83,15 +88,73 @@
     _shimmeringView.frame = shimmeringFrame;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)scanForPeripherals
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if (self.ble.activePeripheral)
+    {
+        if(self.ble.activePeripheral.state == CBPeripheralStateConnected)
+        {
+            [self.ble.CM cancelPeripheralConnection:self.ble.activePeripheral];
+            return;
+        }
+    }
+    
+    if (self.ble.peripherals)
+    {
+        self.ble.peripherals = nil;
+    }
+    
+    [self.ble findBLEPeripherals:4];
+    
+    [NSTimer scheduledTimerWithTimeInterval:(float)2.0 target:self selector:@selector(connectionTimer:) userInfo:nil repeats:NO];
+    
+//    [indConnecting startAnimating];
 }
-*/
+
+-(void) connectionTimer:(NSTimer *)timer
+{
+//    [btnConnect setEnabled:true];
+//    [btnConnect setTitle:@"Disconnect" forState:UIControlStateNormal];
+    
+    if (self.ble.peripherals.count > 0)
+    {
+        [self.ble connectPeripheral:[self.ble.peripherals objectAtIndex:0]];
+    }
+    else
+    {
+//        [btnConnect setTitle:@"Connect" forState:UIControlStateNormal];
+//        [indConnecting stopAnimating];
+    }
+}
+
+#pragma mark - BLEDelegate
+
+- (void)bleForwardCentralManagerDidUpdateState:(CBCentralManager *)centralManager
+{
+    if (centralManager.state == CBCentralManagerStatePoweredOn)
+    {
+        [self scanForPeripherals];
+    }
+}
+
+- (void)bleDidConnect
+{
+    NSLog(@"did connect yeahhh!");
+}
+
+- (void)bleDidDisconnect
+{
+    
+}
+
+- (void)bleDidUpdateRSSI:(NSNumber *)rssi
+{
+    
+}
+
+- (void)bleDidReceiveData:(unsigned char *)data length:(int)length
+{
+    
+}
 
 @end

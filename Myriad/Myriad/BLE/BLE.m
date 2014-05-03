@@ -414,6 +414,9 @@ static int rssi = 0;
 #else
     [self isLECapableHardware];
 #endif
+    
+    // Myriad Edits
+    [self.delegate bleForwardCentralManagerDidUpdateState:central];
 }
 
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI

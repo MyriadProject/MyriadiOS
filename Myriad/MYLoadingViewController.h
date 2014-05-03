@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BLE.h"
 
-@interface MYLoadingViewController : UIViewController
+@interface MYLoadingViewController : UIViewController <BLEDelegate>
+
+@property (strong, nonatomic) BLE *ble;
 
 @end
