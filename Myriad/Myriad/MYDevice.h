@@ -13,6 +13,7 @@
 @property (copy, nonatomic) NSString *name;
 @property (strong, nonatomic) NSArray *commands;
 
++ (instancetype)deviceWithName:(NSString*)name;
 - (instancetype)initWithJson:(NSDictionary *)json;
 
 @end

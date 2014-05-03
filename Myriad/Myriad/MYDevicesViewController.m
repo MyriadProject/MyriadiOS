@@ -7,6 +7,7 @@
 //
 
 #import "MYDevicesViewController.h"
+#import "MYBLEManager.h"
 
 @interface MYDevicesViewController ()
 
@@ -50,17 +51,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [[[MYBLEManager sharedManager] knownDevices] count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tableCell" forIndexPath:indexPath];
-    
-    // Configure the cell...
     
     return cell;
 }
