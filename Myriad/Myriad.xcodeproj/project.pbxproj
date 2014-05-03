@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3378A7BE19154DDF0080E88A /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 3378A7BC19154DDF0080E88A /* BLE.m */; };
+		33F5C618191569910002A419 /* MYBLEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F5C617191569910002A419 /* MYBLEManager.m */; };
 		AF147F9819154E9800D227C4 /* MYDevicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF147F9719154E9800D227C4 /* MYDevicesViewController.m */; };
 		AF147F9B19154EC200D227C4 /* MYWorkflowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF147F9A19154EC200D227C4 /* MYWorkflowsViewController.m */; };
 		AF19AB3F19148BB100A43EDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF19AB3E19148BB100A43EDD /* Foundation.framework */; };
@@ -43,6 +44,8 @@
 		3378A7BB19154DDF0080E88A /* BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLE.h; sourceTree = "<group>"; };
 		3378A7BC19154DDF0080E88A /* BLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLE.m; sourceTree = "<group>"; };
 		3378A7BD19154DDF0080E88A /* BLEDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDefines.h; sourceTree = "<group>"; };
+		33F5C616191569910002A419 /* MYBLEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYBLEManager.h; sourceTree = "<group>"; };
+		33F5C617191569910002A419 /* MYBLEManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYBLEManager.m; sourceTree = "<group>"; };
 		AF147F9619154E9800D227C4 /* MYDevicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYDevicesViewController.h; sourceTree = "<group>"; };
 		AF147F9719154E9800D227C4 /* MYDevicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYDevicesViewController.m; sourceTree = "<group>"; };
 		AF147F9919154EC200D227C4 /* MYWorkflowsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYWorkflowsViewController.h; sourceTree = "<group>"; };
@@ -155,6 +158,8 @@
 				AF79C8C71915383C0056BFEE /* MYLoadingViewController.m */,
 				AF19AB5919148BB100A43EDD /* Images.xcassets */,
 				AF19AB4519148BB100A43EDD /* Supporting Files */,
+				33F5C616191569910002A419 /* MYBLEManager.h */,
+				33F5C617191569910002A419 /* MYBLEManager.m */,
 			);
 			path = Myriad;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 			files = (
 				AF79C8D019153CB70056BFEE /* FBShimmeringLayer.m in Sources */,
 				AF19AB4F19148BB100A43EDD /* MYAppDelegate.m in Sources */,
+				33F5C618191569910002A419 /* MYBLEManager.m in Sources */,
 				3378A7BE19154DDF0080E88A /* BLE.m in Sources */,
 				AF147F9819154E9800D227C4 /* MYDevicesViewController.m in Sources */,
 				AF79C8D119153CB70056BFEE /* FBShimmeringView.m in Sources */,
