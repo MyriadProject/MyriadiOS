@@ -12,9 +12,10 @@
 
 @property (copy, nonatomic) NSString *name;
 @property NSInteger deviceProtocol;
-@property NSInteger deviceHash;
+@property NSString* deviceHash;
 @property NSInteger deviceBits;
 
 - (instancetype)initWithJson:(NSDictionary *)json;
+- (NSString *)description;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "MYTestViewController.h"
+#import "MYBLEManager.h"
 
 @interface MYTestViewController ()
 
@@ -23,7 +24,8 @@
     return self;
 }
 - (IBAction)sendTestCommand:(id)sender {
-    
+    [[MYBLEManager sharedManager] sendString:@"1,77E1C0DA,32"];
+    NSLog(@"Sending Test String to Arduino");
 }
 
 - (void)viewDidLoad

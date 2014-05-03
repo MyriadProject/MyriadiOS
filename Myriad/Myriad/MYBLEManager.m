@@ -110,4 +110,20 @@
     return [NSArray arrayWithArray:self.devices];
 }
 
+- (void) sendString:(NSString *)string
+{
+    NSString *s;
+    NSData *d;
+    
+    if (string.length > 16)
+        s = [string substringToIndex:16];
+    else
+        s = string;
+    
+    d = [s dataUsingEncoding:NSUTF8StringEncoding];
+    if (self.ble.activePeripheral.state == CBPeripheralStateConnected) {
+        [self.ble write:d];
+    }
+}
+
 @end
