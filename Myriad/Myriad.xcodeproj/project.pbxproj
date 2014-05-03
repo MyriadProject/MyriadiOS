@@ -22,6 +22,10 @@
 		AF19AB6319148BB100A43EDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF19AB4219148BB100A43EDD /* UIKit.framework */; };
 		AF19AB6B19148BB100A43EDD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF19AB6919148BB100A43EDD /* InfoPlist.strings */; };
 		AF19AB6D19148BB100A43EDD /* MyriadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF19AB6C19148BB100A43EDD /* MyriadTests.m */; };
+		AF79C8C81915383C0056BFEE /* MYLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF79C8C71915383C0056BFEE /* MYLoadingViewController.m */; };
+		AF79C8D019153CB70056BFEE /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AF79C8CD19153CB70056BFEE /* FBShimmeringLayer.m */; };
+		AF79C8D119153CB70056BFEE /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF79C8CF19153CB70056BFEE /* FBShimmeringView.m */; };
+		AF79C8D319153E030056BFEE /* Wallpaper.png in Resources */ = {isa = PBXBuildFile; fileRef = AF79C8D219153E030056BFEE /* Wallpaper.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,15 @@
 		AF19AB6819148BB100A43EDD /* MyriadTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyriadTests-Info.plist"; sourceTree = "<group>"; };
 		AF19AB6A19148BB100A43EDD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AF19AB6C19148BB100A43EDD /* MyriadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyriadTests.m; sourceTree = "<group>"; };
+		AF79C8C61915383C0056BFEE /* MYLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MYLoadingViewController.h; path = ../MYLoadingViewController.h; sourceTree = "<group>"; };
+		AF79C8C71915383C0056BFEE /* MYLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MYLoadingViewController.m; path = ../MYLoadingViewController.m; sourceTree = "<group>"; };
+		AF79C8CA19153CB70056BFEE /* FBShimmering-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBShimmering-Prefix.pch"; sourceTree = "<group>"; };
+		AF79C8CB19153CB70056BFEE /* FBShimmering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmering.h; sourceTree = "<group>"; };
+		AF79C8CC19153CB70056BFEE /* FBShimmeringLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringLayer.h; sourceTree = "<group>"; };
+		AF79C8CD19153CB70056BFEE /* FBShimmeringLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringLayer.m; sourceTree = "<group>"; };
+		AF79C8CE19153CB70056BFEE /* FBShimmeringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringView.h; sourceTree = "<group>"; };
+		AF79C8CF19153CB70056BFEE /* FBShimmeringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringView.m; sourceTree = "<group>"; };
+		AF79C8D219153E030056BFEE /* Wallpaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wallpaper.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,9 +128,12 @@
 		AF19AB4419148BB100A43EDD /* Myriad */ = {
 			isa = PBXGroup;
 			children = (
+				AF79C8C919153CAA0056BFEE /* FBShimmer */,
 				AF19AB4D19148BB100A43EDD /* MYAppDelegate.h */,
 				AF19AB4E19148BB100A43EDD /* MYAppDelegate.m */,
 				AF19AB5019148BB100A43EDD /* Main.storyboard */,
+				AF79C8C61915383C0056BFEE /* MYLoadingViewController.h */,
+				AF79C8C71915383C0056BFEE /* MYLoadingViewController.m */,
 				AF19AB5319148BB100A43EDD /* MYFirstViewController.h */,
 				AF19AB5419148BB100A43EDD /* MYFirstViewController.m */,
 				AF19AB5619148BB100A43EDD /* MYSecondViewController.h */,
@@ -131,6 +147,7 @@
 		AF19AB4519148BB100A43EDD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AF79C8D219153E030056BFEE /* Wallpaper.png */,
 				AF19AB4619148BB100A43EDD /* Myriad-Info.plist */,
 				AF19AB4719148BB100A43EDD /* InfoPlist.strings */,
 				AF19AB4A19148BB100A43EDD /* main.m */,
@@ -155,6 +172,19 @@
 				AF19AB6919148BB100A43EDD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF79C8C919153CAA0056BFEE /* FBShimmer */ = {
+			isa = PBXGroup;
+			children = (
+				AF79C8CA19153CB70056BFEE /* FBShimmering-Prefix.pch */,
+				AF79C8CB19153CB70056BFEE /* FBShimmering.h */,
+				AF79C8CC19153CB70056BFEE /* FBShimmeringLayer.h */,
+				AF79C8CD19153CB70056BFEE /* FBShimmeringLayer.m */,
+				AF79C8CE19153CB70056BFEE /* FBShimmeringView.h */,
+				AF79C8CF19153CB70056BFEE /* FBShimmeringView.m */,
+			);
+			name = FBShimmer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF79C8D319153E030056BFEE /* Wallpaper.png in Resources */,
 				AF19AB5A19148BB100A43EDD /* Images.xcassets in Resources */,
 				AF19AB4919148BB100A43EDD /* InfoPlist.strings in Resources */,
 				AF19AB5219148BB100A43EDD /* Main.storyboard in Resources */,
@@ -255,8 +286,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF79C8D019153CB70056BFEE /* FBShimmeringLayer.m in Sources */,
 				AF19AB5819148BB100A43EDD /* MYSecondViewController.m in Sources */,
 				AF19AB4F19148BB100A43EDD /* MYAppDelegate.m in Sources */,
+				AF79C8D119153CB70056BFEE /* FBShimmeringView.m in Sources */,
+				AF79C8C81915383C0056BFEE /* MYLoadingViewController.m in Sources */,
 				AF19AB5519148BB100A43EDD /* MYFirstViewController.m in Sources */,
 				AF19AB4B19148BB100A43EDD /* main.m in Sources */,
 			);
@@ -465,6 +499,7 @@
 				AF19AB7219148BB100A43EDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF19AB7319148BB100A43EDD /* Build configuration list for PBXNativeTarget "MyriadTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +508,7 @@
 				AF19AB7519148BB100A43EDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

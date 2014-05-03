@@ -11,3 +11,5 @@
 @interface MYFirstViewController : UIViewController
 
 @end
+
+UIAlertView *loadingAlert;
