@@ -14,8 +14,6 @@
 		AF19AB4B19148BB100A43EDD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF19AB4A19148BB100A43EDD /* main.m */; };
 		AF19AB4F19148BB100A43EDD /* MYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF19AB4E19148BB100A43EDD /* MYAppDelegate.m */; };
 		AF19AB5219148BB100A43EDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF19AB5019148BB100A43EDD /* Main.storyboard */; };
-		AF19AB5519148BB100A43EDD /* MYFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF19AB5419148BB100A43EDD /* MYFirstViewController.m */; };
-		AF19AB5819148BB100A43EDD /* MYSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF19AB5719148BB100A43EDD /* MYSecondViewController.m */; };
 		AF19AB5A19148BB100A43EDD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF19AB5919148BB100A43EDD /* Images.xcassets */; };
 		AF19AB6119148BB100A43EDD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF19AB6019148BB100A43EDD /* XCTest.framework */; };
 		AF19AB6219148BB100A43EDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF19AB3E19148BB100A43EDD /* Foundation.framework */; };
@@ -50,10 +48,6 @@
 		AF19AB4D19148BB100A43EDD /* MYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYAppDelegate.h; sourceTree = "<group>"; };
 		AF19AB4E19148BB100A43EDD /* MYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYAppDelegate.m; sourceTree = "<group>"; };
 		AF19AB5119148BB100A43EDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AF19AB5319148BB100A43EDD /* MYFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYFirstViewController.h; sourceTree = "<group>"; };
-		AF19AB5419148BB100A43EDD /* MYFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYFirstViewController.m; sourceTree = "<group>"; };
-		AF19AB5619148BB100A43EDD /* MYSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYSecondViewController.h; sourceTree = "<group>"; };
-		AF19AB5719148BB100A43EDD /* MYSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYSecondViewController.m; sourceTree = "<group>"; };
 		AF19AB5919148BB100A43EDD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AF19AB5F19148BB100A43EDD /* MyriadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyriadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF19AB6019148BB100A43EDD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -134,10 +128,6 @@
 				AF19AB5019148BB100A43EDD /* Main.storyboard */,
 				AF79C8C61915383C0056BFEE /* MYLoadingViewController.h */,
 				AF79C8C71915383C0056BFEE /* MYLoadingViewController.m */,
-				AF19AB5319148BB100A43EDD /* MYFirstViewController.h */,
-				AF19AB5419148BB100A43EDD /* MYFirstViewController.m */,
-				AF19AB5619148BB100A43EDD /* MYSecondViewController.h */,
-				AF19AB5719148BB100A43EDD /* MYSecondViewController.m */,
 				AF19AB5919148BB100A43EDD /* Images.xcassets */,
 				AF19AB4519148BB100A43EDD /* Supporting Files */,
 			);
@@ -287,11 +277,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF79C8D019153CB70056BFEE /* FBShimmeringLayer.m in Sources */,
-				AF19AB5819148BB100A43EDD /* MYSecondViewController.m in Sources */,
 				AF19AB4F19148BB100A43EDD /* MYAppDelegate.m in Sources */,
 				AF79C8D119153CB70056BFEE /* FBShimmeringView.m in Sources */,
 				AF79C8C81915383C0056BFEE /* MYLoadingViewController.m in Sources */,
-				AF19AB5519148BB100A43EDD /* MYFirstViewController.m in Sources */,
 				AF19AB4B19148BB100A43EDD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
