@@ -67,6 +67,9 @@
     _logoLabel.backgroundColor = [UIColor clearColor];
     _shimmeringView.contentView = _logoLabel;
     
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_tapped:)];
+    [self.view addGestureRecognizer:tapRecognizer];
+    
     [[MYBLEManager sharedManager] scanForPeripherals];
 }
 
@@ -74,6 +77,14 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)_tapped:(UITapGestureRecognizer *)tapRecognizer
+{
+    _shimmeringView.shimmering = NO;
+    
+    UITabBarController* tbController = [self.storyboard instantiateViewControllerWithIdentifier:@"mainTabView"];
+    [self presentViewController:tbController animated:YES completion:nil];
 }
 
 - (void)viewWillLayoutSubviews
