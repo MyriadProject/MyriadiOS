@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3378A7BE19154DDF0080E88A /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 3378A7BC19154DDF0080E88A /* BLE.m */; };
 		AF19AB3F19148BB100A43EDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF19AB3E19148BB100A43EDD /* Foundation.framework */; };
 		AF19AB4119148BB100A43EDD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF19AB4019148BB100A43EDD /* CoreGraphics.framework */; };
 		AF19AB4319148BB100A43EDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF19AB4219148BB100A43EDD /* UIKit.framework */; };
@@ -39,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3378A7BB19154DDF0080E88A /* BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLE.h; sourceTree = "<group>"; };
+		3378A7BC19154DDF0080E88A /* BLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLE.m; sourceTree = "<group>"; };
+		3378A7BD19154DDF0080E88A /* BLEDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDefines.h; sourceTree = "<group>"; };
 		AF19AB3B19148BB100A43EDD /* Myriad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Myriad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF19AB3E19148BB100A43EDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AF19AB4019148BB100A43EDD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -95,6 +99,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3378A7BA19154DDF0080E88A /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				3378A7BB19154DDF0080E88A /* BLE.h */,
+				3378A7BC19154DDF0080E88A /* BLE.m */,
+				3378A7BD19154DDF0080E88A /* BLEDefines.h */,
+			);
+			path = BLE;
+			sourceTree = "<group>";
+		};
 		AF19AB3219148BB100A43EDD = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +142,7 @@
 		AF19AB4419148BB100A43EDD /* Myriad */ = {
 			isa = PBXGroup;
 			children = (
+				3378A7BA19154DDF0080E88A /* BLE */,
 				AF79C8C919153CAA0056BFEE /* FBShimmer */,
 				AF19AB4D19148BB100A43EDD /* MYAppDelegate.h */,
 				AF19AB4E19148BB100A43EDD /* MYAppDelegate.m */,
@@ -289,6 +304,7 @@
 				AF79C8D019153CB70056BFEE /* FBShimmeringLayer.m in Sources */,
 				AF19AB5819148BB100A43EDD /* MYSecondViewController.m in Sources */,
 				AF19AB4F19148BB100A43EDD /* MYAppDelegate.m in Sources */,
+				3378A7BE19154DDF0080E88A /* BLE.m in Sources */,
 				AF79C8D119153CB70056BFEE /* FBShimmeringView.m in Sources */,
 				AF79C8C81915383C0056BFEE /* MYLoadingViewController.m in Sources */,
 				AF19AB5519148BB100A43EDD /* MYFirstViewController.m in Sources */,
