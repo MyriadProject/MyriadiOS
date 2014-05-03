@@ -29,4 +29,24 @@
     return [NSString stringWithFormat:@"%ld,%@,%ld",(long)self.deviceProtocol,self.deviceHash,(long)self.deviceBits];
 }
 
+- (BOOL)isEqual:(id)other {
+    if (other == self)
+        return YES;
+    if (!other || ![other isKindOfClass:[self class]])
+        return NO;
+    return [self isEqualToCommand:other];
+}
+
+- (BOOL)isEqualToCommand:(MYCommand *)command {
+    if (self == command)
+        return YES;
+    if ([self deviceProtocol] != [command deviceProtocol])
+        return NO;
+    if (![[self deviceHash] isEqual:[command deviceHash]])
+        return NO;
+    if ([self deviceBits] != [command deviceBits])
+        return NO;
+    return YES;
+}
+
 @end
