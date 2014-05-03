@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Ym0-K5-dRf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Ym0-K5-dRf">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -155,11 +155,72 @@
                             <outlet property="delegate" destination="uXh-Lg-551" id="ALX-Nk-Ekz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Devices" id="weE-bn-xKf"/>
+                    <navigationItem key="navigationItem" title="Devices" id="weE-bn-xKf">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="7Y0-L0-RhD">
+                            <connections>
+                                <segue destination="ujL-bx-X2s" kind="push" id="7Pn-PN-wg9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="96y-Qi-th6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1853" y="-178"/>
+        </scene>
+        <!--New Device Controller-->
+        <scene sceneID="FGg-Zp-xdX">
+            <objects>
+                <viewController id="ujL-bx-X2s" customClass="MYNewDeviceController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uNq-uL-use"/>
+                        <viewControllerLayoutGuide type="bottom" id="h9W-gU-FVM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pS2-Y0-Fwp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i-can-has-cheezburger" translatesAutoresizingMaskIntoConstraints="NO" id="x1D-uP-kg6">
+                                <rect key="frame" x="-19" y="54" width="339" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yZS-xa-da6">
+                                <rect key="frame" x="20" y="132" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="deviceNameChanged:" destination="ujL-bx-X2s" eventType="editingChanged" id="L83-ia-6IP"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Device Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tae-CH-vDW">
+                                <rect key="frame" x="107" y="90" width="107" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pj1-Wl-V2d">
+                                <rect key="frame" x="20" y="200" width="280" height="287"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="76"/>
+                                <state key="normal" title="LEARN">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="learnPressed:" destination="ujL-bx-X2s" eventType="touchUpInside" id="jDX-Vt-4RW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Iy5-ZI-FXL"/>
+                    <connections>
+                        <outlet property="deviceNameField" destination="yZS-xa-da6" id="bTM-Tu-9Ah"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sy2-IT-xTe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2272" y="-178"/>
         </scene>
         <!--Navigation Controller - Devices-->
         <scene sceneID="eJJ-rI-7ht">
@@ -178,6 +239,9 @@
             <point key="canvasLocation" x="1289" y="-178"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="i-can-has-cheezburger" width="124" height="99"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

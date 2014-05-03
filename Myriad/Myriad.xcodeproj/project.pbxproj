@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3378A7BE19154DDF0080E88A /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 3378A7BC19154DDF0080E88A /* BLE.m */; };
+		33B7492F1915997700C708B4 /* MYNewDeviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B7492E1915997700C708B4 /* MYNewDeviceController.m */; };
 		33F5C618191569910002A419 /* MYBLEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F5C617191569910002A419 /* MYBLEManager.m */; };
 		33F5C61A19157ACD0002A419 /* testDevices.json in Resources */ = {isa = PBXBuildFile; fileRef = 33F5C61919157ACD0002A419 /* testDevices.json */; };
 		33F5C62019157DE10002A419 /* MYDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F5C61F19157DE10002A419 /* MYDevice.m */; };
@@ -31,7 +32,6 @@
 		AF79C8C81915383C0056BFEE /* MYLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF79C8C71915383C0056BFEE /* MYLoadingViewController.m */; };
 		AF79C8D019153CB70056BFEE /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AF79C8CD19153CB70056BFEE /* FBShimmeringLayer.m */; };
 		AF79C8D119153CB70056BFEE /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF79C8CF19153CB70056BFEE /* FBShimmeringView.m */; };
-		AFDA8B7A191575930013CEE1 /* Wallpaper.png in Resources */ = {isa = PBXBuildFile; fileRef = AFDA8B79191575930013CEE1 /* Wallpaper.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +48,8 @@
 		3378A7BB19154DDF0080E88A /* BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLE.h; sourceTree = "<group>"; };
 		3378A7BC19154DDF0080E88A /* BLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLE.m; sourceTree = "<group>"; };
 		3378A7BD19154DDF0080E88A /* BLEDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDefines.h; sourceTree = "<group>"; };
+		33B7492D1915997700C708B4 /* MYNewDeviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYNewDeviceController.h; sourceTree = "<group>"; };
+		33B7492E1915997700C708B4 /* MYNewDeviceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYNewDeviceController.m; sourceTree = "<group>"; };
 		33F5C616191569910002A419 /* MYBLEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYBLEManager.h; sourceTree = "<group>"; };
 		33F5C617191569910002A419 /* MYBLEManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYBLEManager.m; sourceTree = "<group>"; };
 		33F5C61919157ACD0002A419 /* testDevices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testDevices.json; sourceTree = "<group>"; };
@@ -178,6 +180,8 @@
 				33F5C61F19157DE10002A419 /* MYDevice.m */,
 				33F5C62119157DEE0002A419 /* MYCommand.h */,
 				33F5C62219157DEE0002A419 /* MYCommand.m */,
+				33B7492D1915997700C708B4 /* MYNewDeviceController.h */,
+				33B7492E1915997700C708B4 /* MYNewDeviceController.m */,
 			);
 			path = Myriad;
 			sourceTree = "<group>";
@@ -302,7 +306,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF79C8D319153E030056BFEE /* Wallpaper.png in Resources */,
 				33F5C61A19157ACD0002A419 /* testDevices.json in Resources */,
 				AF19AB5A19148BB100A43EDD /* Images.xcassets in Resources */,
 				AF19AB4919148BB100A43EDD /* InfoPlist.strings in Resources */,
@@ -328,6 +331,7 @@
 				AF79C8D019153CB70056BFEE /* FBShimmeringLayer.m in Sources */,
 				AF19AB4F19148BB100A43EDD /* MYAppDelegate.m in Sources */,
 				33F5C618191569910002A419 /* MYBLEManager.m in Sources */,
+				33B7492F1915997700C708B4 /* MYNewDeviceController.m in Sources */,
 				33F5C62019157DE10002A419 /* MYDevice.m in Sources */,
 				33F5C62319157DEE0002A419 /* MYCommand.m in Sources */,
 				3378A7BE19154DDF0080E88A /* BLE.m in Sources */,
