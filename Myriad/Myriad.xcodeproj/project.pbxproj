@@ -30,7 +30,7 @@
 		AF79C8C81915383C0056BFEE /* MYLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF79C8C71915383C0056BFEE /* MYLoadingViewController.m */; };
 		AF79C8D019153CB70056BFEE /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AF79C8CD19153CB70056BFEE /* FBShimmeringLayer.m */; };
 		AF79C8D119153CB70056BFEE /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF79C8CF19153CB70056BFEE /* FBShimmeringView.m */; };
-		AF79C8D319153E030056BFEE /* Wallpaper.png in Resources */ = {isa = PBXBuildFile; fileRef = AF79C8D219153E030056BFEE /* Wallpaper.png */; };
+		AFDA8B7A191575930013CEE1 /* Wallpaper.png in Resources */ = {isa = PBXBuildFile; fileRef = AFDA8B79191575930013CEE1 /* Wallpaper.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +83,7 @@
 		AF79C8CD19153CB70056BFEE /* FBShimmeringLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringLayer.m; sourceTree = "<group>"; };
 		AF79C8CE19153CB70056BFEE /* FBShimmeringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringView.h; sourceTree = "<group>"; };
 		AF79C8CF19153CB70056BFEE /* FBShimmeringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringView.m; sourceTree = "<group>"; };
-		AF79C8D219153E030056BFEE /* Wallpaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wallpaper.png; sourceTree = "<group>"; };
+		AFDA8B79191575930013CEE1 /* Wallpaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wallpaper.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,7 +180,7 @@
 		AF19AB4519148BB100A43EDD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AF79C8D219153E030056BFEE /* Wallpaper.png */,
+				AFDA8B79191575930013CEE1 /* Wallpaper.png */,
 				AF19AB4619148BB100A43EDD /* Myriad-Info.plist */,
 				AF19AB4719148BB100A43EDD /* InfoPlist.strings */,
 				AF19AB4A19148BB100A43EDD /* main.m */,
