@@ -14,5 +14,6 @@
 + (instancetype)sharedManager;
 
 - (void)scanForPeripherals;
+- (NSArray *)knownDevices;
 
 @end

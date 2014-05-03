@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3378A7BE19154DDF0080E88A /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 3378A7BC19154DDF0080E88A /* BLE.m */; };
 		33F5C618191569910002A419 /* MYBLEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F5C617191569910002A419 /* MYBLEManager.m */; };
+		33F5C61A19157ACD0002A419 /* testDevices.json in Resources */ = {isa = PBXBuildFile; fileRef = 33F5C61919157ACD0002A419 /* testDevices.json */; };
+		33F5C62019157DE10002A419 /* MYDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F5C61F19157DE10002A419 /* MYDevice.m */; };
+		33F5C62319157DEE0002A419 /* MYCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F5C62219157DEE0002A419 /* MYCommand.m */; };
 		AF147F9819154E9800D227C4 /* MYDevicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF147F9719154E9800D227C4 /* MYDevicesViewController.m */; };
 		AF147F9B19154EC200D227C4 /* MYWorkflowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF147F9A19154EC200D227C4 /* MYWorkflowsViewController.m */; };
 		AF19AB3F19148BB100A43EDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF19AB3E19148BB100A43EDD /* Foundation.framework */; };
@@ -46,6 +49,11 @@
 		3378A7BD19154DDF0080E88A /* BLEDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDefines.h; sourceTree = "<group>"; };
 		33F5C616191569910002A419 /* MYBLEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYBLEManager.h; sourceTree = "<group>"; };
 		33F5C617191569910002A419 /* MYBLEManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYBLEManager.m; sourceTree = "<group>"; };
+		33F5C61919157ACD0002A419 /* testDevices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testDevices.json; sourceTree = "<group>"; };
+		33F5C61E19157DE10002A419 /* MYDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYDevice.h; sourceTree = "<group>"; };
+		33F5C61F19157DE10002A419 /* MYDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYDevice.m; sourceTree = "<group>"; };
+		33F5C62119157DEE0002A419 /* MYCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYCommand.h; sourceTree = "<group>"; };
+		33F5C62219157DEE0002A419 /* MYCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYCommand.m; sourceTree = "<group>"; };
 		AF147F9619154E9800D227C4 /* MYDevicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYDevicesViewController.h; sourceTree = "<group>"; };
 		AF147F9719154E9800D227C4 /* MYDevicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYDevicesViewController.m; sourceTree = "<group>"; };
 		AF147F9919154EC200D227C4 /* MYWorkflowsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYWorkflowsViewController.h; sourceTree = "<group>"; };
@@ -145,6 +153,7 @@
 		AF19AB4419148BB100A43EDD /* Myriad */ = {
 			isa = PBXGroup;
 			children = (
+				33F5C61919157ACD0002A419 /* testDevices.json */,
 				3378A7BA19154DDF0080E88A /* BLE */,
 				AF79C8C919153CAA0056BFEE /* FBShimmer */,
 				AF19AB4D19148BB100A43EDD /* MYAppDelegate.h */,
@@ -160,6 +169,10 @@
 				AF19AB4519148BB100A43EDD /* Supporting Files */,
 				33F5C616191569910002A419 /* MYBLEManager.h */,
 				33F5C617191569910002A419 /* MYBLEManager.m */,
+				33F5C61E19157DE10002A419 /* MYDevice.h */,
+				33F5C61F19157DE10002A419 /* MYDevice.m */,
+				33F5C62119157DEE0002A419 /* MYCommand.h */,
+				33F5C62219157DEE0002A419 /* MYCommand.m */,
 			);
 			path = Myriad;
 			sourceTree = "<group>";
@@ -284,7 +297,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFDA8B7A191575930013CEE1 /* Wallpaper.png in Resources */,
+				AF79C8D319153E030056BFEE /* Wallpaper.png in Resources */,
+				33F5C61A19157ACD0002A419 /* testDevices.json in Resources */,
 				AF19AB5A19148BB100A43EDD /* Images.xcassets in Resources */,
 				AF19AB4919148BB100A43EDD /* InfoPlist.strings in Resources */,
 				AF19AB5219148BB100A43EDD /* Main.storyboard in Resources */,
@@ -309,6 +323,8 @@
 				AF79C8D019153CB70056BFEE /* FBShimmeringLayer.m in Sources */,
 				AF19AB4F19148BB100A43EDD /* MYAppDelegate.m in Sources */,
 				33F5C618191569910002A419 /* MYBLEManager.m in Sources */,
+				33F5C62019157DE10002A419 /* MYDevice.m in Sources */,
+				33F5C62319157DEE0002A419 /* MYCommand.m in Sources */,
 				3378A7BE19154DDF0080E88A /* BLE.m in Sources */,
 				AF147F9819154E9800D227C4 /* MYDevicesViewController.m in Sources */,
 				AF79C8D119153CB70056BFEE /* FBShimmeringView.m in Sources */,

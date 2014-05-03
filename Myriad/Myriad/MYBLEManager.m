@@ -7,10 +7,13 @@
 //
 
 #import "MYBLEManager.h"
+#import "MYDevice.h"
+#import "MYCommand.h"
 
 @interface MYBLEManager ()
 
 @property (strong, nonatomic) BLE *ble;
+@property (strong, nonatomic) NSMutableArray* devices;
 
 @end
 
@@ -25,28 +28,21 @@
         sharedManager.ble = [[BLE alloc] init];
         [sharedManager.ble controlSetup];
         sharedManager.ble.delegate = sharedManager;
+        
+        sharedManager.devices = [NSMutableArray array];
+        
+        // TODO: just hardcode in a test device for now
+        NSError *error = nil;
+        NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"testDevices" ofType:@"json"]];
+        NSArray *devices = [NSMutableArray arrayWithArray:[NSJSONSerialization JSONObjectWithData:data options:0 error:&error]];
+        sharedManager.devices = [NSMutableArray array];
+        for (NSDictionary *d in devices)
+        {
+            MYDevice *device = [[MYDevice alloc] initWithJson:d];
+            [sharedManager.devices addObject:device];
+        }
     });
     return sharedManager;
-}
-
-- (void)scanForPeripherals
-{
-    if (self.ble.activePeripheral)
-    {
-        if(self.ble.activePeripheral.state == CBPeripheralStateConnected)
-        {
-            [self.ble.CM cancelPeripheralConnection:self.ble.activePeripheral];
-            return;
-        }
-    }
-    
-    if (self.ble.peripherals)
-    {
-        self.ble.peripherals = nil;
-    }
-    
-    [self.ble findBLEPeripherals:4];
-    [NSTimer scheduledTimerWithTimeInterval:(float)2.0 target:self selector:@selector(connectionTimer:) userInfo:nil repeats:NO];
 }
 
 -(void) connectionTimer:(NSTimer *)timer
@@ -85,6 +81,33 @@
 - (void)bleDidReceiveData:(unsigned char *)data length:(int)length
 {
     NSLog(@"ble did receive data");
+}
+
+#pragma mark - Public
+
+- (void)scanForPeripherals
+{
+    if (self.ble.activePeripheral)
+    {
+        if(self.ble.activePeripheral.state == CBPeripheralStateConnected)
+        {
+            [self.ble.CM cancelPeripheralConnection:self.ble.activePeripheral];
+            return;
+        }
+    }
+    
+    if (self.ble.peripherals)
+    {
+        self.ble.peripherals = nil;
+    }
+    
+    [self.ble findBLEPeripherals:4];
+    [NSTimer scheduledTimerWithTimeInterval:(float)2.0 target:self selector:@selector(connectionTimer:) userInfo:nil repeats:NO];
+}
+
+- (NSArray *)knownDevices
+{
+    return [NSArray arrayWithArray:self.devices];
 }
 
 @end
