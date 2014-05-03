@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Myriad. All rights reserved.
 //
 
+#import "MYBLEManager.h"
 #import "MYLoadingViewController.h"
 #import "FBShimmeringView.h"
 
@@ -66,10 +67,7 @@
     _logoLabel.backgroundColor = [UIColor clearColor];
     _shimmeringView.contentView = _logoLabel;
     
-    // BLE
-    self.ble = [[BLE alloc] init];
-    [self.ble controlSetup];
-    self.ble.delegate = self;
+    [[MYBLEManager sharedManager] scanForPeripherals];
 }
 
 - (void)didReceiveMemoryWarning
@@ -86,75 +84,6 @@
     shimmeringFrame.origin.y = shimmeringFrame.size.height * 0.68;
     shimmeringFrame.size.height = shimmeringFrame.size.height * 0.32;
     _shimmeringView.frame = shimmeringFrame;
-}
-
-- (void)scanForPeripherals
-{
-    if (self.ble.activePeripheral)
-    {
-        if(self.ble.activePeripheral.state == CBPeripheralStateConnected)
-        {
-            [self.ble.CM cancelPeripheralConnection:self.ble.activePeripheral];
-            return;
-        }
-    }
-    
-    if (self.ble.peripherals)
-    {
-        self.ble.peripherals = nil;
-    }
-    
-    [self.ble findBLEPeripherals:4];
-    
-    [NSTimer scheduledTimerWithTimeInterval:(float)2.0 target:self selector:@selector(connectionTimer:) userInfo:nil repeats:NO];
-    
-//    [indConnecting startAnimating];
-}
-
--(void) connectionTimer:(NSTimer *)timer
-{
-//    [btnConnect setEnabled:true];
-//    [btnConnect setTitle:@"Disconnect" forState:UIControlStateNormal];
-    
-    if (self.ble.peripherals.count > 0)
-    {
-        [self.ble connectPeripheral:[self.ble.peripherals objectAtIndex:0]];
-    }
-    else
-    {
-//        [btnConnect setTitle:@"Connect" forState:UIControlStateNormal];
-//        [indConnecting stopAnimating];
-    }
-}
-
-#pragma mark - BLEDelegate
-
-- (void)bleForwardCentralManagerDidUpdateState:(CBCentralManager *)centralManager
-{
-    if (centralManager.state == CBCentralManagerStatePoweredOn)
-    {
-        [self scanForPeripherals];
-    }
-}
-
-- (void)bleDidConnect
-{
-    NSLog(@"did connect yeahhh!");
-}
-
-- (void)bleDidDisconnect
-{
-    
-}
-
-- (void)bleDidUpdateRSSI:(NSNumber *)rssi
-{
-    
-}
-
-- (void)bleDidReceiveData:(unsigned char *)data length:(int)length
-{
-    
 }
 
 @end
