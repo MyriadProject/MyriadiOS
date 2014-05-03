@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF19AB3F19148BB100A43EDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF19AB3E19148BB100A43EDD /* Foundation.framework */; };
+		AF19AB4119148BB100A43EDD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF19AB4019148BB100A43EDD /* CoreGraphics.framework */; };
+		AF19AB4319148BB100A43EDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF19AB4219148BB100A43EDD /* UIKit.framework */; };
+		AF19AB4919148BB100A43EDD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF19AB4719148BB100A43EDD /* InfoPlist.strings */; };
+		AF19AB4B19148BB100A43EDD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF19AB4A19148BB100A43EDD /* main.m */; };
+		AF19AB4F19148BB100A43EDD /* MYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF19AB4E19148BB100A43EDD /* MYAppDelegate.m */; };
+		AF19AB5219148BB100A43EDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF19AB5019148BB100A43EDD /* Main.storyboard */; };
+		AF19AB5519148BB100A43EDD /* MYFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF19AB5419148BB100A43EDD /* MYFirstViewController.m */; };
+		AF19AB5819148BB100A43EDD /* MYSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF19AB5719148BB100A43EDD /* MYSecondViewController.m */; };
+		AF19AB5A19148BB100A43EDD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF19AB5919148BB100A43EDD /* Images.xcassets */; };
+		AF19AB6119148BB100A43EDD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF19AB6019148BB100A43EDD /* XCTest.framework */; };
+		AF19AB6219148BB100A43EDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF19AB3E19148BB100A43EDD /* Foundation.framework */; };
+		AF19AB6319148BB100A43EDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF19AB4219148BB100A43EDD /* UIKit.framework */; };
+		AF19AB6B19148BB100A43EDD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF19AB6919148BB100A43EDD /* InfoPlist.strings */; };
+		AF19AB6D19148BB100A43EDD /* MyriadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF19AB6C19148BB100A43EDD /* MyriadTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF19AB6419148BB100A43EDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF19AB3319148BB100A43EDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF19AB3A19148BB100A43EDD;
+			remoteInfo = Myriad;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF19AB3B19148BB100A43EDD /* Myriad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Myriad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF19AB3E19148BB100A43EDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AF19AB4019148BB100A43EDD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AF19AB4219148BB100A43EDD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AF19AB4619148BB100A43EDD /* Myriad-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Myriad-Info.plist"; sourceTree = "<group>"; };
+		AF19AB4819148BB100A43EDD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AF19AB4A19148BB100A43EDD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AF19AB4C19148BB100A43EDD /* Myriad-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Myriad-Prefix.pch"; sourceTree = "<group>"; };
+		AF19AB4D19148BB100A43EDD /* MYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYAppDelegate.h; sourceTree = "<group>"; };
+		AF19AB4E19148BB100A43EDD /* MYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYAppDelegate.m; sourceTree = "<group>"; };
+		AF19AB5119148BB100A43EDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF19AB5319148BB100A43EDD /* MYFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYFirstViewController.h; sourceTree = "<group>"; };
+		AF19AB5419148BB100A43EDD /* MYFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYFirstViewController.m; sourceTree = "<group>"; };
+		AF19AB5619148BB100A43EDD /* MYSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYSecondViewController.h; sourceTree = "<group>"; };
+		AF19AB5719148BB100A43EDD /* MYSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYSecondViewController.m; sourceTree = "<group>"; };
+		AF19AB5919148BB100A43EDD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AF19AB5F19148BB100A43EDD /* MyriadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyriadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF19AB6019148BB100A43EDD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		AF19AB6819148BB100A43EDD /* MyriadTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyriadTests-Info.plist"; sourceTree = "<group>"; };
+		AF19AB6A19148BB100A43EDD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AF19AB6C19148BB100A43EDD /* MyriadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyriadTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF19AB3819148BB100A43EDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF19AB4119148BB100A43EDD /* CoreGraphics.framework in Frameworks */,
+				AF19AB4319148BB100A43EDD /* UIKit.framework in Frameworks */,
+				AF19AB3F19148BB100A43EDD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF19AB5C19148BB100A43EDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF19AB6119148BB100A43EDD /* XCTest.framework in Frameworks */,
+				AF19AB6319148BB100A43EDD /* UIKit.framework in Frameworks */,
+				AF19AB6219148BB100A43EDD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF19AB3219148BB100A43EDD = {
+			isa = PBXGroup;
+			children = (
+				AF19AB4419148BB100A43EDD /* Myriad */,
+				AF19AB6619148BB100A43EDD /* MyriadTests */,
+				AF19AB3D19148BB100A43EDD /* Frameworks */,
+				AF19AB3C19148BB100A43EDD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF19AB3C19148BB100A43EDD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF19AB3B19148BB100A43EDD /* Myriad.app */,
+				AF19AB5F19148BB100A43EDD /* MyriadTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF19AB3D19148BB100A43EDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF19AB3E19148BB100A43EDD /* Foundation.framework */,
+				AF19AB4019148BB100A43EDD /* CoreGraphics.framework */,
+				AF19AB4219148BB100A43EDD /* UIKit.framework */,
+				AF19AB6019148BB100A43EDD /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF19AB4419148BB100A43EDD /* Myriad */ = {
+			isa = PBXGroup;
+			children = (
+				AF19AB4D19148BB100A43EDD /* MYAppDelegate.h */,
+				AF19AB4E19148BB100A43EDD /* MYAppDelegate.m */,
+				AF19AB5019148BB100A43EDD /* Main.storyboard */,
+				AF19AB5319148BB100A43EDD /* MYFirstViewController.h */,
+				AF19AB5419148BB100A43EDD /* MYFirstViewController.m */,
+				AF19AB5619148BB100A43EDD /* MYSecondViewController.h */,
+				AF19AB5719148BB100A43EDD /* MYSecondViewController.m */,
+				AF19AB5919148BB100A43EDD /* Images.xcassets */,
+				AF19AB4519148BB100A43EDD /* Supporting Files */,
+			);
+			path = Myriad;
+			sourceTree = "<group>";
+		};
+		AF19AB4519148BB100A43EDD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF19AB4619148BB100A43EDD /* Myriad-Info.plist */,
+				AF19AB4719148BB100A43EDD /* InfoPlist.strings */,
+				AF19AB4A19148BB100A43EDD /* main.m */,
+				AF19AB4C19148BB100A43EDD /* Myriad-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF19AB6619148BB100A43EDD /* MyriadTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF19AB6C19148BB100A43EDD /* MyriadTests.m */,
+				AF19AB6719148BB100A43EDD /* Supporting Files */,
+			);
+			path = MyriadTests;
+			sourceTree = "<group>";
+		};
+		AF19AB6719148BB100A43EDD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF19AB6819148BB100A43EDD /* MyriadTests-Info.plist */,
+				AF19AB6919148BB100A43EDD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF19AB3A19148BB100A43EDD /* Myriad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF19AB7019148BB100A43EDD /* Build configuration list for PBXNativeTarget "Myriad" */;
+			buildPhases = (
+				AF19AB3719148BB100A43EDD /* Sources */,
+				AF19AB3819148BB100A43EDD /* Frameworks */,
+				AF19AB3919148BB100A43EDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Myriad;
+			productName = Myriad;
+			productReference = AF19AB3B19148BB100A43EDD /* Myriad.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF19AB5E19148BB100A43EDD /* MyriadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF19AB7319148BB100A43EDD /* Build configuration list for PBXNativeTarget "MyriadTests" */;
+			buildPhases = (
+				AF19AB5B19148BB100A43EDD /* Sources */,
+				AF19AB5C19148BB100A43EDD /* Frameworks */,
+				AF19AB5D19148BB100A43EDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF19AB6519148BB100A43EDD /* PBXTargetDependency */,
+			);
+			name = MyriadTests;
+			productName = MyriadTests;
+			productReference = AF19AB5F19148BB100A43EDD /* MyriadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF19AB3319148BB100A43EDD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MY;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Myriad;
+				TargetAttributes = {
+					AF19AB5E19148BB100A43EDD = {
+						TestTargetID = AF19AB3A19148BB100A43EDD;
+					};
+				};
+			};
+			buildConfigurationList = AF19AB3619148BB100A43EDD /* Build configuration list for PBXProject "Myriad" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF19AB3219148BB100A43EDD;
+			productRefGroup = AF19AB3C19148BB100A43EDD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF19AB3A19148BB100A43EDD /* Myriad */,
+				AF19AB5E19148BB100A43EDD /* MyriadTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF19AB3919148BB100A43EDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF19AB5A19148BB100A43EDD /* Images.xcassets in Resources */,
+				AF19AB4919148BB100A43EDD /* InfoPlist.strings in Resources */,
+				AF19AB5219148BB100A43EDD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF19AB5D19148BB100A43EDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF19AB6B19148BB100A43EDD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF19AB3719148BB100A43EDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF19AB5819148BB100A43EDD /* MYSecondViewController.m in Sources */,
+				AF19AB4F19148BB100A43EDD /* MYAppDelegate.m in Sources */,
+				AF19AB5519148BB100A43EDD /* MYFirstViewController.m in Sources */,
+				AF19AB4B19148BB100A43EDD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF19AB5B19148BB100A43EDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF19AB6D19148BB100A43EDD /* MyriadTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF19AB6519148BB100A43EDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF19AB3A19148BB100A43EDD /* Myriad */;
+			targetProxy = AF19AB6419148BB100A43EDD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF19AB4719148BB100A43EDD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF19AB4819148BB100A43EDD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AF19AB5019148BB100A43EDD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF19AB5119148BB100A43EDD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF19AB6919148BB100A43EDD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF19AB6A19148BB100A43EDD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF19AB6E19148BB100A43EDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AF19AB6F19148BB100A43EDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF19AB7119148BB100A43EDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Myriad/Myriad-Prefix.pch";
+				INFOPLIST_FILE = "Myriad/Myriad-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AF19AB7219148BB100A43EDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Myriad/Myriad-Prefix.pch";
+				INFOPLIST_FILE = "Myriad/Myriad-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		AF19AB7419148BB100A43EDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Myriad.app/Myriad";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Myriad/Myriad-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MyriadTests/MyriadTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		AF19AB7519148BB100A43EDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Myriad.app/Myriad";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Myriad/Myriad-Prefix.pch";
+				INFOPLIST_FILE = "MyriadTests/MyriadTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF19AB3619148BB100A43EDD /* Build configuration list for PBXProject "Myriad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF19AB6E19148BB100A43EDD /* Debug */,
+				AF19AB6F19148BB100A43EDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF19AB7019148BB100A43EDD /* Build configuration list for PBXNativeTarget "Myriad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF19AB7119148BB100A43EDD /* Debug */,
+				AF19AB7219148BB100A43EDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AF19AB7319148BB100A43EDD /* Build configuration list for PBXNativeTarget "MyriadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF19AB7419148BB100A43EDD /* Debug */,
+				AF19AB7519148BB100A43EDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF19AB3319148BB100A43EDD /* Project object */;
+}
