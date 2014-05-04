@@ -35,6 +35,7 @@
     [self.guideLabel1 setHidden:NO];
     [self.guideLabel2 setHidden:YES];
     [self.guideLabel3 setHidden:YES];
+    [self.guideLabel4 setHidden:YES];
     [self.learnButton setHidden:NO];
     [self.verifyButton setHidden:YES];
     [self.indicatorView stopAnimating];
@@ -48,10 +49,11 @@
     if(sender == self.learnButton){
         [[MYBLEManager sharedManager] sendString:@"START"];
         [self.guideLabel1 setHidden:YES];
+        //in case of a failure eariler on
+        [self.guideLabel4 setHidden:YES];
         [self.guideLabel2 setHidden:NO];
     } else if(sender == self.verifyButton){
         [[MYBLEManager sharedManager] sendString:@"START"];
-        [self.guideLabel3 setHidden:YES];
     }
 }
 
@@ -115,13 +117,23 @@
             [self.indicatorView stopAnimating];
             [self.guideLabel3 setHidden:YES];
             self.isLearning = NO;
-            //TODO: add something to dismiss the window here.
-            //TODO: create the MYCommand object using either array
+            //just in case, you never know
+            self.pass = 1;
             
             if([self.firstPass isEqualToArray:self.secondPass]){
                 NSLog(@"THE COMMANDS MATCH HELL YES!");
+                //TODO: create the object
+                //TODO: maybe show some sort of success thingy
+                [self dismissViewControllerAnimated:YES completion:nil];
+                
             }else{
                 NSLog(@"The commmands do not match or are not being compared properly.");
+                //display the error and reset all the things
+                [self.guideLabel3 setHidden:YES];
+                [self.guideLabel4 setHidden:NO];
+                [self.learnButton setHidden:NO];
+                [self.firstPass removeAllObjects];
+                [self.secondPass removeAllObjects];
             }
         }
         //switch passes and stuff

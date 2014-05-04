@@ -351,7 +351,7 @@
                                 <rect key="frame" x="109" y="128" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Command received. Press Verify above, then press the button on your remote one more time." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="gAi-yi-Ndo">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Command received. Tap Verify above, then press the button on your remote one more time." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="gAi-yi-Ndo">
                                 <rect key="frame" x="20" y="161" width="280" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -359,6 +359,12 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quickly press the button on your old remote you want Myriad to learn." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="5RT-UG-HOI">
                                 <rect key="frame" x="20" y="163" width="280" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unfortunately, the code could not be verified. Tap learn to start over." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="odx-zr-59X">
+                                <rect key="frame" x="20" y="245" width="280" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -377,6 +383,7 @@
                         <outlet property="guideLabel1" destination="aNK-RT-aRK" id="ZnV-oS-aDk"/>
                         <outlet property="guideLabel2" destination="5RT-UG-HOI" id="e4K-Ml-kNh"/>
                         <outlet property="guideLabel3" destination="gAi-yi-Ndo" id="ns3-aJ-w5D"/>
+                        <outlet property="guideLabel4" destination="odx-zr-59X" id="d2q-oY-Xar"/>
                         <outlet property="indicatorView" destination="7P6-C6-Exz" id="2J9-5l-8de"/>
                         <outlet property="learnButton" destination="hes-rJ-SXu" id="Z2P-KK-62V"/>
                         <outlet property="nameField" destination="HCz-Oj-I4z" id="Oe1-O6-B7m"/>
