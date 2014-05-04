@@ -86,6 +86,7 @@
 
 - (void)bleDidReceiveData:(unsigned char *)data length:(int)length
 {
+    [self.delegate bleManagerDidReceiveData:data length:length];
     NSLog(@"ble did receive data");
 }
 
