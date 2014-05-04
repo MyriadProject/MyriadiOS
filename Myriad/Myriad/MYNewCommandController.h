@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MYBLEManager.h"
 
-@interface MYNewCommandController : UIViewController
+@interface MYNewCommandController : UIViewController <MYBLEManagerDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextView *logTextView;
 @property (strong, nonatomic) IBOutlet UITextField *nameField;

@@ -7,7 +7,6 @@
 //
 
 #import "MYNewCommandController.h"
-#import "MYBLEManager.h"
 
 @interface MYNewCommandController ()
 
@@ -22,7 +21,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.isLearning = NO;
     }
     return self;
 }
@@ -31,7 +29,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.isLearning = NO;
+    [MYBLEManager sharedManager].delegate = self;
 }
+
 - (IBAction)cancelPressed:(UIBarButtonItem *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
     if(self.isLearning){
@@ -56,5 +57,27 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark MYBLEManager methods
+
+- (void) bleManagerDidConnect {
+    NSLog(@"CONNECTED");
+}
+
+- (void) bleManagerDidDisconnect {
+    
+}
+
+- (void) bleManagerDidReceiveData:(unsigned char *)data length:(int)length {
+    
+}
+
+- (void) bleManagerDidUpdateRSSI:(NSNumber *)rssi {
+    
+}
+
+- (void) bleManagerForwardCentralManagerDidUpdateState:(CBCentralManager *)centralManager {
+    
+}
 
 @end

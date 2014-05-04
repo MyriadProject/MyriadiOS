@@ -71,6 +71,7 @@
     [self.view addGestureRecognizer:tapRecognizer];
     
     [[MYBLEManager sharedManager] scanForPeripherals];
+    [MYBLEManager sharedManager].delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -99,12 +100,30 @@
     
     UITabBarController* tbController = [self.storyboard instantiateViewControllerWithIdentifier:@"mainTabView"];
     [self presentViewController:tbController animated:YES completion:nil];
+    [MYBLEManager sharedManager].delegate = nil;
 }
 
 #pragma mark MYBLEManager methods
 
 - (void) bleManagerDidConnect {
+    NSLog(@"CONNECTED");
     [self hideLoadingView];
+}
+
+- (void) bleManagerDidDisconnect {
+    
+}
+
+- (void) bleManagerDidReceiveData:(unsigned char *)data length:(int)length {
+    
+}
+
+- (void) bleManagerDidUpdateRSSI:(NSNumber *)rssi {
+    
+}
+
+- (void) bleManagerForwardCentralManagerDidUpdateState:(CBCentralManager *)centralManager {
+    
 }
 
 @end

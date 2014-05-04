@@ -17,6 +17,8 @@
 
 @end
 
+
+
 @implementation MYBLEManager
 
 + (instancetype)sharedManager
@@ -65,16 +67,20 @@
 
 - (void)bleDidConnect
 {
+    
+    [self.delegate bleManagerDidConnect];
     NSLog(@"ble did connect");
 }
 
 - (void)bleDidDisconnect
 {
+    [self.delegate bleManagerDidDisconnect];
     NSLog(@"ble did disconnect");
 }
 
 - (void)bleDidUpdateRSSI:(NSNumber *)rssi
 {
+    [self.delegate bleManagerDidUpdateRSSI:rssi];
     NSLog(@"ble did update RSSI");
 }
 
