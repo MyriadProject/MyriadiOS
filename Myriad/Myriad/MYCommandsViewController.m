@@ -26,7 +26,6 @@
 {
     [super viewDidLoad];
     self.title = self.deviceName;
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -79,6 +78,10 @@
     }
     
     return cell;
+}
+
+- (void) collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
+    //all the stuff for sending a code
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

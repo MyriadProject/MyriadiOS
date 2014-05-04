@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MYCommandsViewController : UICollectionViewController
+@interface MYCommandsViewController : UICollectionViewController <UICollectionViewDelegate>
 
 @property (copy, nonatomic) NSString *deviceName;
 
