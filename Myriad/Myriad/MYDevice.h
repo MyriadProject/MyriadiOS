@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MYCommand.h"
 
 @interface MYDevice : NSObject
 

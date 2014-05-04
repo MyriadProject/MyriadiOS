@@ -11,12 +11,8 @@
 @interface MYCommand : NSObject
 
 @property (copy, nonatomic) NSString *name;
-@property NSInteger deviceProtocol;
-@property NSString* deviceHash;
-@property NSInteger deviceBits;
+@property NSArray *codes;
 
 - (instancetype)initWithJson:(NSDictionary *)json;
-- (instancetype)initWithName:(NSString *)name deviceProtocol:(NSInteger)deviceProtocol deviceHash:(NSString *)deviceHash deviceBits:(NSInteger)deviceBits;
-- (NSString *)description;
-
+- (instancetype)initWithName:(NSString *)name array:(NSArray *)codes;
 @end

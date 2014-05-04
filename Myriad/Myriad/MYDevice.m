@@ -7,8 +7,8 @@
 //
 
 #import "MYDevice.h"
-#import "MYCommand.h"
 #import "MYAppDelegate.h"
+#import "MYDeviceManager.h"
 
 @implementation MYDevice
 

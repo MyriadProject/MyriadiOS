@@ -11,6 +11,7 @@
 #import "MYDeviceManager.h"
 #import "MYDevice.h"
 #import "MYCommand.h"
+#import "MYNewCommandController.h"
 
 @interface MYCommandsViewController ()
 
@@ -25,14 +26,17 @@
 {
     [super viewDidLoad];
     self.title = self.deviceName;
+    
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
+    [super viewWillAppear:animated];
     
     // make sure we have a fresh copy of device
     self.device = [[MYDeviceManager manager] deviceWithName:self.deviceName];
+    
+    [self.collectionView reloadData];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -75,6 +79,12 @@
     }
     
     return cell;
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    UINavigationController *nav = (UINavigationController *)segue.destinationViewController;
+    MYNewCommandController *newCC =(MYNewCommandController *)nav.viewControllers.firstObject;
+    newCC.deviceName = self.deviceName;
 }
 
 @end

@@ -7,6 +7,9 @@
 //
 
 #import "MYNewCommandController.h"
+#import "MYCommand.h"
+#import "MYDevice.h"
+#import "MYDeviceManager.h"
 
 @interface MYNewCommandController ()
 @property BOOL isLearning;
@@ -137,7 +140,10 @@
                 NSLog(@"THE COMMANDS MATCH HELL YES!");
                 //TODO: create the object
                 //TODO: maybe show some sort of success thingy
+                MYCommand *command = [[MYCommand alloc] initWithName:self.nameField.text array:self.firstPass];
                 [self dismissViewControllerAnimated:YES completion:nil];
+                [[MYDeviceManager manager] createCommand:command inDeviceWithName:self.deviceName];
+                
                 
             }else{
                 NSLog(@"The commmands do not match or are not being compared properly.");

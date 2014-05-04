@@ -83,6 +83,17 @@
     return [[self.devices allValues] sortedArrayUsingDescriptors:@[sortDescriptor]];
 }
 
+-(void) createCommand:(MYCommand *)command inDeviceWithName:(NSString *)name {
+    MYDevice *device = [self deviceWithName:name];
+    
+    if(!device.commands){
+        device.commands = [[NSArray alloc] init];
+    }
+    device.commands = [device.commands arrayByAddingObject:command];
+    [self archive];
+    
+}
+
 - (MYDevice *)deviceWithName:(NSString *)name
 {
     return self.devices[name];

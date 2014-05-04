@@ -20,4 +20,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *guideLabel4;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *indicatorView;
 
+//the name of the device we're currently creating a command for
+@property (strong, nonatomic) NSString *deviceName;
+
 @end

@@ -17,50 +17,40 @@
     if (self)
     {
         self.name = json[@"name"];
-        self.deviceProtocol = [json[@"device_protocol"] integerValue];
-        self.deviceHash = json[@"device_hash"];
-        self.deviceBits = [json[@"device_bits"] integerValue];
+        self.codes = json[@"codes"];
     }
     return self;
 }
 
-- (instancetype)initWithName:(NSString *)name deviceProtocol:(NSInteger)deviceProtocol deviceHash:(NSString *)deviceHash deviceBits:(NSInteger)deviceBits
+- (instancetype)initWithName:(NSString *)name array:(NSArray *)codes
 {
     self = [super init];
     if (self)
     {
         self.name = name;
-        self.deviceProtocol = deviceProtocol;
-        self.deviceHash = deviceHash;
-        self.deviceBits = deviceBits;
+        self.codes = codes;
     }
     return self;
 }
 
-//use description to send data using MYBLEManager to the Arduino!
--(NSString *)description
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    return [NSString stringWithFormat:@"%ld,%@,%ld",(long)self.deviceProtocol,self.deviceHash,(long)self.deviceBits];
+    self = [super init];
+    if (self)
+    {
+        self.name = [aDecoder decodeObjectForKey:@"name"];
+        self.codes = [aDecoder decodeObjectForKey:@"codes"];
+    }
+    
+    return self;
 }
 
-- (BOOL)isEqual:(id)other {
-    if (other == self)
-        return YES;
-    if (!other || ![other isKindOfClass:[self class]])
-        return NO;
-    return [self isEqualToCommand:other];
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:self.name forKey:@"name"];
+    [aCoder encodeObject:self.codes forKey:@"codes"];
 }
 
-- (BOOL)isEqualToCommand:(MYCommand *)command {
-    if (self == command)
-        return YES;
-    if ([self deviceProtocol] != [command deviceProtocol])
-        return NO;
-    if (![[self deviceHash] isEqual:[command deviceHash]])
-        return NO;
-    if ([self deviceBits] != [command deviceBits])
-        return NO;
-    return YES;
-}
+
 
 @end

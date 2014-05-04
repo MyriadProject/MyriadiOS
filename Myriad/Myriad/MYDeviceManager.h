@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class MYDevice;
+@class MYCommand;
 
 @interface MYDeviceManager : NSObject
 
@@ -18,5 +19,6 @@
 - (void)unregisterDevice:(MYDevice *)device;
 - (NSArray *)allDevices;
 - (MYDevice *)deviceWithName:(NSString *)name;
-
+- (void)archive;
+- (void) createCommand:(MYCommand *)command inDeviceWithName:(NSString *)name;
 @end
