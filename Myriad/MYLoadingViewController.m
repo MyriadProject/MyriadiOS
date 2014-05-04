@@ -81,10 +81,7 @@
 
 - (void)_tapped:(UITapGestureRecognizer *)tapRecognizer
 {
-    _shimmeringView.shimmering = NO;
-    
-    UITabBarController* tbController = [self.storyboard instantiateViewControllerWithIdentifier:@"mainTabView"];
-    [self presentViewController:tbController animated:YES completion:nil];
+    [self hideLoadingView];
 }
 
 - (void)viewWillLayoutSubviews
@@ -95,6 +92,19 @@
     shimmeringFrame.origin.y = shimmeringFrame.size.height * 0.68;
     shimmeringFrame.size.height = shimmeringFrame.size.height * 0.32;
     _shimmeringView.frame = shimmeringFrame;
+}
+
+-(void) hideLoadingView {
+    _shimmeringView.shimmering = NO;
+    
+    UITabBarController* tbController = [self.storyboard instantiateViewControllerWithIdentifier:@"mainTabView"];
+    [self presentViewController:tbController animated:YES completion:nil];
+}
+
+#pragma mark MYBLEManager methods
+
+- (void) bleManagerDidConnect {
+    [self hideLoadingView];
 }
 
 @end
