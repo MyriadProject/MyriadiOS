@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Myriad. All rights reserved.
 //
 
+#import "MYAppDelegate.h"
 #import "MYCommand.h"
 
 @implementation MYCommand
@@ -19,6 +20,19 @@
         self.deviceProtocol = [json[@"device_protocol"] integerValue];
         self.deviceHash = json[@"device_hash"];
         self.deviceBits = [json[@"device_bits"] integerValue];
+    }
+    return self;
+}
+
+- (instancetype)initWithName:(NSString *)name deviceProtocol:(NSInteger)deviceProtocol deviceHash:(NSString *)deviceHash deviceBits:(NSInteger)deviceBits
+{
+    self = [super init];
+    if (self)
+    {
+        self.name = name;
+        self.deviceProtocol = deviceProtocol;
+        self.deviceHash = deviceHash;
+        self.deviceBits = deviceBits;
     }
     return self;
 }

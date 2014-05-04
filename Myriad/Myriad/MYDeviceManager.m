@@ -1,0 +1,83 @@
+//
+//  MYDeviceManager.m
+//  Myriad
+//
+//  Created by John Saba on 5/3/14.
+//  Copyright (c) 2014 Myriad. All rights reserved.
+//
+
+#import "MYDeviceManager.h"
+#import "MYAppDelegate.h"
+#import "MYDevice.h"
+#import "MYCommand.h"
+
+@interface MYDeviceManager ()
+
+@property (strong, nonatomic) NSMutableDictionary *devices;
+
+@end
+
+@implementation MYDeviceManager
+
++ (instancetype)manager
+{
+    MYDeviceManager *manager = [NSKeyedUnarchiver unarchiveObjectWithFile:[MYDeviceManager filePath]];
+    if (!manager)
+    {
+        manager = [[MYDeviceManager alloc] init];
+        [manager archive];
+    }
+    return manager;
+}
+
++ (NSString*)filePath
+{
+    return [[MYAppDelegate applicationDocumentsDirectory] stringByAppendingPathComponent:@"DeviceManagerStore"];
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super init];
+    if (self)
+    {
+        self.devices = [aDecoder decodeObjectForKey:@"devices"];
+    }
+    
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:self.devices forKey:@"devices"];
+}
+
+- (void)archive
+{
+    BOOL success = [NSKeyedArchiver archiveRootObject:self toFile:[MYDeviceManager filePath]];
+    if (!success)
+    {
+        NSLog(@"Warning: archive to path: '%@' unsuccesful!", [MYDeviceManager filePath]);
+    }
+}
+
+- (void)registerDevice:(MYDevice*)device
+{
+    if (!self.devices)
+    {
+        self.devices = [NSMutableDictionary dictionary];
+    }
+    [self.devices setObject:device forKey:device.name];
+    [self archive];
+}
+
+- (NSArray *)allDevices
+{
+    return [self.devices allValues];
+}
+
+- (MYDevice *)deviceWithName:(NSString *)name
+{
+    return self.devices[name];
+}
+
+@end

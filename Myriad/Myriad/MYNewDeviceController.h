@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class MYDeviceManager;
+
 @interface MYNewDeviceController : UIViewController <UITextFieldDelegate>
+
+@property (strong, nonatomic) MYDeviceManager *deviceManager;
 
 @end

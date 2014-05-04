@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class MYDeviceManager;
+
 @interface MYDevicesViewController : UITableViewController
+
+@property (strong, nonatomic) MYDeviceManager *deviceManager;
 
 @end
