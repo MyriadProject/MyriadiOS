@@ -56,12 +56,12 @@
     _shimmeringView = [[FBShimmeringView alloc] init];
     _shimmeringView.shimmering = YES;
     _shimmeringView.shimmeringBeginFadeDuration = 0.3;
-    _shimmeringView.shimmeringOpacity = 0.3;
+    _shimmeringView.shimmeringOpacity = 0.45;
     [self.view addSubview:_shimmeringView];
     
     _logoLabel = [[UILabel alloc] initWithFrame:_shimmeringView.bounds];
     _logoLabel.text = @"Connecting";
-    _logoLabel.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:60.0];
+    _logoLabel.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:54.0];
     _logoLabel.textColor = [UIColor whiteColor];
     _logoLabel.textAlignment = NSTextAlignmentCenter;
     _logoLabel.backgroundColor = [UIColor clearColor];
