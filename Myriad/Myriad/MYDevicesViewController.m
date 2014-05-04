@@ -11,6 +11,7 @@
 #import "MYDeviceManager.h"
 #import "MYDeviceCell.h"
 #import "MYDevice.h"
+#import "MYCommandsViewController.h"
 
 @interface MYDevicesViewController ()
 
@@ -65,6 +66,13 @@
         [[MYDeviceManager manager] unregisterDevice:device];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    MYDeviceCell *cell = (MYDeviceCell *)sender;
+    MYCommandsViewController *vc = (MYCommandsViewController *)segue.destinationViewController;
+    vc.deviceName = cell.deviceName.text;
 }
 
 @end
