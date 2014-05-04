@@ -13,8 +13,11 @@
 
 @property (strong, nonatomic) IBOutlet UITextView *logTextView;
 @property (strong, nonatomic) IBOutlet UITextField *nameField;
-@property BOOL isLearning;
 @property (strong, nonatomic) IBOutlet UIButton *learnButton;
-@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *guideLabels;
 @property (strong, nonatomic) IBOutlet UIButton *verifyButton;
+@property (strong, nonatomic) IBOutlet UILabel *guideLabel1;
+@property (strong, nonatomic) IBOutlet UILabel *guideLabel2;
+@property (strong, nonatomic) IBOutlet UILabel *guideLabel3;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *indicatorView;
+
 @end
