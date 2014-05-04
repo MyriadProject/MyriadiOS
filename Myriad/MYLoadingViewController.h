@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MYLoadingViewController : UIViewController
+@interface MYLoadingViewController : UIViewController <MYBLEManagerDelegate>
 
 @end

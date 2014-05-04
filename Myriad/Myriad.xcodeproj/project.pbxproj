@@ -34,6 +34,7 @@
 		AF79C8C81915383C0056BFEE /* MYLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF79C8C71915383C0056BFEE /* MYLoadingViewController.m */; };
 		AF79C8D019153CB70056BFEE /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AF79C8CD19153CB70056BFEE /* FBShimmeringLayer.m */; };
 		AF79C8D119153CB70056BFEE /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF79C8CF19153CB70056BFEE /* FBShimmeringView.m */; };
+		AF8F5EDA19169E920013D30B /* MYNewCommandController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8F5ED919169E920013D30B /* MYNewCommandController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,8 @@
 		AF79C8CD19153CB70056BFEE /* FBShimmeringLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringLayer.m; sourceTree = "<group>"; };
 		AF79C8CE19153CB70056BFEE /* FBShimmeringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringView.h; sourceTree = "<group>"; };
 		AF79C8CF19153CB70056BFEE /* FBShimmeringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringView.m; sourceTree = "<group>"; };
+		AF8F5ED819169E920013D30B /* MYNewCommandController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYNewCommandController.h; sourceTree = "<group>"; };
+		AF8F5ED919169E920013D30B /* MYNewCommandController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYNewCommandController.m; sourceTree = "<group>"; };
 		AFDA8B79191575930013CEE1 /* Wallpaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wallpaper.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +191,8 @@
 				33F5C62219157DEE0002A419 /* MYCommand.m */,
 				33B7492D1915997700C708B4 /* MYNewDeviceController.h */,
 				33B7492E1915997700C708B4 /* MYNewDeviceController.m */,
+				AF8F5ED819169E920013D30B /* MYNewCommandController.h */,
+				AF8F5ED919169E920013D30B /* MYNewCommandController.m */,
 				33B749331915C1D200C708B4 /* MYDeviceManager.h */,
 				33B749341915C1D200C708B4 /* MYDeviceManager.m */,
 				3377DDF91915D85D00980A20 /* MYDeviceCell.h */,
@@ -346,6 +351,7 @@
 				33B7492F1915997700C708B4 /* MYNewDeviceController.m in Sources */,
 				33F5C62019157DE10002A419 /* MYDevice.m in Sources */,
 				33F5C62319157DEE0002A419 /* MYCommand.m in Sources */,
+				AF8F5EDA19169E920013D30B /* MYNewCommandController.m in Sources */,
 				3377DDFB1915D85D00980A20 /* MYDeviceCell.m in Sources */,
 				3378A7BE19154DDF0080E88A /* BLE.m in Sources */,
 				AF2F8D61191580D7002CE9A9 /* MYTestViewController.m in Sources */,
