@@ -24,6 +24,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = self.deviceName;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -44,9 +45,9 @@
         if (!self.noCommandsLabel)
         {
             UILabel *label = [[UILabel alloc] init];
-            label.font = [UIFont fontWithName:@"Helvetica" size:25];
-            label.textColor = [UIColor redColor];
-            label.text = @"Add Some Commands!";
+            label.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:32];
+            label.textColor = [UIColor whiteColor];
+            label.text = @"No Commands";
             [label sizeToFit];
             label.center = CGPointMake(320/2, 200);
             [self.view addSubview:label];

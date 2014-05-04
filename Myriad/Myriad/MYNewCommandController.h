@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MYBLEManager.h"
 
-@interface MYNewCommandController : UIViewController <MYBLEManagerDelegate>
+@interface MYNewCommandController : UIViewController <MYBLEManagerDelegate, UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *nameField;
 @property (strong, nonatomic) IBOutlet UIButton *learnButton;

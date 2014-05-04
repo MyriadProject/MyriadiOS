@@ -32,6 +32,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.nameField becomeFirstResponder];
+    self.nameField.delegate = self;
     [self.guideLabel1 setHidden:NO];
     [self.guideLabel2 setHidden:YES];
     [self.guideLabel3 setHidden:YES];
@@ -64,6 +66,17 @@
     [[MYBLEManager sharedManager] sendString:@"STOP"];
         self.isLearning = NO;
     }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+
+       if(textField.text && textField.text.length > 0){
+           [textField resignFirstResponder];
+            return YES;
+       }
+    return NO;
+
 }
 
 - (void)didReceiveMemoryWarning

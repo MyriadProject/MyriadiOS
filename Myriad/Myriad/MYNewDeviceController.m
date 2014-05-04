@@ -22,7 +22,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self.deviceNameField becomeFirstResponder];
     self.deviceNameField.delegate = self;
 }
 

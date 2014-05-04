@@ -203,12 +203,12 @@
 				33B749341915C1D200C708B4 /* MYDeviceManager.m */,
 				3377DDF91915D85D00980A20 /* MYDeviceCell.h */,
 				3377DDFA1915D85D00980A20 /* MYDeviceCell.m */,
-				AF19AB5919148BB100A43EDD /* Images.xcassets */,
-				AF19AB4519148BB100A43EDD /* Supporting Files */,
 				33D590EF1916B8AC000032E3 /* MYCommandsViewController.h */,
 				33D590F01916B8AC000032E3 /* MYCommandsViewController.m */,
 				33D590F21916C0D4000032E3 /* MYCommandCell.h */,
 				33D590F31916C0D4000032E3 /* MYCommandCell.m */,
+				AF19AB5919148BB100A43EDD /* Images.xcassets */,
+				AF19AB4519148BB100A43EDD /* Supporting Files */,
 			);
 			path = Myriad;
 			sourceTree = "<group>";
