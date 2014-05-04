@@ -238,16 +238,24 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="WIP-5F-aZg">
-                                <rect key="frame" x="0.0" y="312" width="320" height="256"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="WIP-5F-aZg">
+                                <rect key="frame" x="0.0" y="368" width="320" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Device" id="Iy5-ZI-FXL">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="j6i-hj-3EG"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="NLK-ni-lrs"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="j6i-hj-3EG">
+                            <connections>
+                                <action selector="cancelPressed:" destination="ujL-bx-X2s" id="NPB-dp-YOd"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="NLK-ni-lrs">
+                            <connections>
+                                <action selector="donePressed:" destination="ujL-bx-X2s" id="mab-A4-NsX"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="deviceNameField" destination="yZS-xa-da6" id="bTM-Tu-9Ah"/>

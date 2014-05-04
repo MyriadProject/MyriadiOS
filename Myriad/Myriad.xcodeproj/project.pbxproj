@@ -180,8 +180,6 @@
 				AF2F8D60191580D7002CE9A9 /* MYTestViewController.m */,
 				33B7492D1915997700C708B4 /* MYNewDeviceController.h */,
 				33B7492E1915997700C708B4 /* MYNewDeviceController.m */,
-				AF19AB5919148BB100A43EDD /* Images.xcassets */,
-				AF19AB4519148BB100A43EDD /* Supporting Files */,
 				33F5C616191569910002A419 /* MYBLEManager.h */,
 				33F5C617191569910002A419 /* MYBLEManager.m */,
 				33F5C61E19157DE10002A419 /* MYDevice.h */,
@@ -194,6 +192,8 @@
 				33B749341915C1D200C708B4 /* MYDeviceManager.m */,
 				3377DDF91915D85D00980A20 /* MYDeviceCell.h */,
 				3377DDFA1915D85D00980A20 /* MYDeviceCell.m */,
+				AF19AB5919148BB100A43EDD /* Images.xcassets */,
+				AF19AB4519148BB100A43EDD /* Supporting Files */,
 			);
 			path = Myriad;
 			sourceTree = "<group>";
