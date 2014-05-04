@@ -10,5 +10,7 @@
 
 @interface MYTestViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIButton *testButton;
+@property (strong, nonatomic) IBOutlet UIButton *startButton;
+@property (strong, nonatomic) IBOutlet UIButton *stopButton;
 
 @end

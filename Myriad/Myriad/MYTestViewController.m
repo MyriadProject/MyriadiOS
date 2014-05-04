@@ -24,8 +24,16 @@
     return self;
 }
 - (IBAction)sendTestCommand:(id)sender {
-    [[MYBLEManager sharedManager] sendString:@"1,77E1C0DA,32"];
-    NSLog(@"Sending Test String to Arduino");
+    if([self testButton] == sender){
+        [[MYBLEManager sharedManager] sendString:@"1,77E1C0DA,32"];
+        NSLog(@"Sending Test String to Arduino");
+    } else if ([self startButton] == sender) {
+        [[MYBLEManager sharedManager] sendString:@"START"];
+        NSLog(@"Sending Test START to Arduino");
+    } else if ([self stopButton] == sender)  {
+        [[MYBLEManager sharedManager] sendString:@"STOP"];
+        NSLog(@"Sending Test STOP to Arduino");
+    }
 }
 
 - (void)viewDidLoad
