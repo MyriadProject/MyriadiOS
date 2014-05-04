@@ -14,6 +14,7 @@
 @interface MYDeviceManager ()
 
 @property (strong, nonatomic) NSMutableDictionary *devices;
+@property (weak, nonatomic) id <NSObject> hello;
 
 @end
 
@@ -70,9 +71,16 @@
     [self archive];
 }
 
+- (void)unregisterDevice:(MYDevice *)device
+{
+    [self.devices removeObjectForKey:device.name];
+    [self archive];
+}
+
 - (NSArray *)allDevices
 {
-    return [self.devices allValues];
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+    return [[self.devices allValues] sortedArrayUsingDescriptors:@[sortDescriptor]];
 }
 
 - (MYDevice *)deviceWithName:(NSString *)name

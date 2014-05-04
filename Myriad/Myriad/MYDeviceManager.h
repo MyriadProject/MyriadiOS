@@ -15,6 +15,7 @@
 + (instancetype)manager;
 
 - (void)registerDevice:(MYDevice*)device;
+- (void)unregisterDevice:(MYDevice *)device;
 - (NSArray *)allDevices;
 - (MYDevice *)deviceWithName:(NSString *)name;
 

@@ -11,6 +11,7 @@
 		3378A7BE19154DDF0080E88A /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 3378A7BC19154DDF0080E88A /* BLE.m */; };
 		33B7492F1915997700C708B4 /* MYNewDeviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B7492E1915997700C708B4 /* MYNewDeviceController.m */; };
 		33B749351915C1D200C708B4 /* MYDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B749341915C1D200C708B4 /* MYDeviceManager.m */; };
+		33D590EE19169F0D000032E3 /* MYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D590ED19169F0D000032E3 /* MYTableViewController.m */; };
 		33F5C618191569910002A419 /* MYBLEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F5C617191569910002A419 /* MYBLEManager.m */; };
 		33F5C61A19157ACD0002A419 /* testDevices.json in Resources */ = {isa = PBXBuildFile; fileRef = 33F5C61919157ACD0002A419 /* testDevices.json */; };
 		33F5C62019157DE10002A419 /* MYDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F5C61F19157DE10002A419 /* MYDevice.m */; };
@@ -56,6 +57,8 @@
 		33B7492E1915997700C708B4 /* MYNewDeviceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYNewDeviceController.m; sourceTree = "<group>"; };
 		33B749331915C1D200C708B4 /* MYDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYDeviceManager.h; sourceTree = "<group>"; };
 		33B749341915C1D200C708B4 /* MYDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYDeviceManager.m; sourceTree = "<group>"; };
+		33D590EC19169F0D000032E3 /* MYTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYTableViewController.h; sourceTree = "<group>"; };
+		33D590ED19169F0D000032E3 /* MYTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYTableViewController.m; sourceTree = "<group>"; };
 		33F5C616191569910002A419 /* MYBLEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYBLEManager.h; sourceTree = "<group>"; };
 		33F5C617191569910002A419 /* MYBLEManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYBLEManager.m; sourceTree = "<group>"; };
 		33F5C61919157ACD0002A419 /* testDevices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testDevices.json; sourceTree = "<group>"; };
@@ -194,6 +197,8 @@
 				3377DDFA1915D85D00980A20 /* MYDeviceCell.m */,
 				AF19AB5919148BB100A43EDD /* Images.xcassets */,
 				AF19AB4519148BB100A43EDD /* Supporting Files */,
+				33D590EC19169F0D000032E3 /* MYTableViewController.h */,
+				33D590ED19169F0D000032E3 /* MYTableViewController.m */,
 			);
 			path = Myriad;
 			sourceTree = "<group>";
@@ -355,6 +360,7 @@
 				AF147F9B19154EC200D227C4 /* MYWorkflowsViewController.m in Sources */,
 				AF79C8C81915383C0056BFEE /* MYLoadingViewController.m in Sources */,
 				AF19AB4B19148BB100A43EDD /* main.m in Sources */,
+				33D590EE19169F0D000032E3 /* MYTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
