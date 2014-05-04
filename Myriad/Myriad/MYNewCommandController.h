@@ -19,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *guideLabel3;
 @property (strong, nonatomic) IBOutlet UILabel *guideLabel4;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *indicatorView;
+@property (strong, nonatomic) IBOutlet UIButton *fakeLearnButton;
 
 //the name of the device we're currently creating a command for
 @property (strong, nonatomic) NSString *deviceName;

@@ -49,11 +49,11 @@
         if (!self.noCommandsLabel)
         {
             UILabel *label = [[UILabel alloc] init];
-            label.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:32];
+            label.font = [UIFont fontWithName:@"Helvetica Neue" size:32];
             label.textColor = [UIColor whiteColor];
             label.text = @"No Commands";
             [label sizeToFit];
-            label.center = CGPointMake(320/2, 200);
+            label.center = CGPointMake(320/2, 125);
             [self.view addSubview:label];
             self.noCommandsLabel = label;
         }
@@ -70,7 +70,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     MYCommandCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor redColor];
+    //cell.backgroundColor = [UIColor redColor];
     
     if (indexPath.row < self.device.commands.count)
     {

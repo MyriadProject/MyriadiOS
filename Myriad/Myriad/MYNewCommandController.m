@@ -141,9 +141,8 @@
                 //TODO: create the object
                 //TODO: maybe show some sort of success thingy
                 MYCommand *command = [[MYCommand alloc] initWithName:self.nameField.text array:self.firstPass];
-                [self dismissViewControllerAnimated:YES completion:nil];
                 [[MYDeviceManager manager] createCommand:command inDeviceWithName:self.deviceName];
-                
+                [self dismissViewControllerAnimated:YES completion:nil];
                 
             }else{
                 NSLog(@"The commmands do not match or are not being compared properly.");
@@ -158,7 +157,6 @@
         //switch passes and stuff
     } else if (self.isLearning) {
         if(self.pass == 1){
-            //we're assuming that the format of the string sent is now "int,hex,int"
             [self.firstPass addObject:(NSString *)string];
             NSLog(@"Data added to first pass.");
         }else if(self.pass == 2){
@@ -180,6 +178,15 @@
 //    }
 //    return YES;
 //}
+- (IBAction)fakeButtonPressed:(id)sender {
+    //this simulates all the other stuff
+    NSArray *fakeArray = [[NSArray alloc] initWithObjects:@"FAKE1",@"FAKE2",@"FAKE3",@"FAKE4", nil];
+    MYCommand *command = [[MYCommand alloc] initWithName:self.nameField.text array:fakeArray];
+    
+    [[MYDeviceManager manager] createCommand:command inDeviceWithName:self.deviceName];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void) bleManagerDidUpdateRSSI:(NSNumber *)rssi {
     
