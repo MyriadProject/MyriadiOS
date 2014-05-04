@@ -33,8 +33,11 @@
     // make sure we have most recent device manager;
     self.deviceManager = [MYDeviceManager manager];
 }
+- (IBAction)cancelPressed:(UIBarButtonItem *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
-- (IBAction)learnPressed:(id)sender
+- (IBAction)donePressed:(UIBarButtonItem *)sender
 {
     if ([self.deviceName length] > 0)
     {
@@ -46,7 +49,7 @@
             [self.deviceManager registerDevice:device];
         }
         
-        [self.navigationController popViewControllerAnimated:YES];
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
     else
     {
