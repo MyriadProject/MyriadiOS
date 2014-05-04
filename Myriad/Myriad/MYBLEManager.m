@@ -119,6 +119,7 @@
 
 - (void) sendString:(NSString *)string
 {
+    NSLog(@"Sending code to Arduino: %@",string);
     NSString *s;
     NSData *d;
     

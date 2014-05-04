@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Myriad. All rights reserved.
 //
 
+#import "MYBLEManager.h"
 #import "MYCommandsViewController.h"
 #import "MYCommandCell.h"
 #import "MYDeviceManager.h"
@@ -80,8 +81,24 @@
     return cell;
 }
 
-- (void) collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
+- (void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     //all the stuff for sending a code
+    MYCommand *command = [self.device.commands objectAtIndex:indexPath.row];
+    [self recSendCodesFromArray:command.codes];
+    
+    
+}
+
+-(void) recSendCodesFromArray:(NSArray *)array {
+    if([array count] == 0){
+        return;
+    } else {
+        NSString *string = [array firstObject];
+        NSArray *newArray = [array subarrayWithRange:NSMakeRange(1, [array count]-1)];
+        
+        [[MYBLEManager sharedManager] sendString:string];
+        [self performSelector:@selector(recSendCodesFromArray:) withObject:newArray afterDelay:0.25];
+    }
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
