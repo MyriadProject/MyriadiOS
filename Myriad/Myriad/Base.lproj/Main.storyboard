@@ -156,7 +156,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Devices" id="weE-bn-xKf">
-                        <barButtonItem key="rightBarButtonItem" title="+" id="7Y0-L0-RhD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7Y0-L0-RhD">
                             <connections>
                                 <segue destination="ujL-bx-X2s" kind="push" id="7Pn-PN-wg9"/>
                             </connections>
