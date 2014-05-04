@@ -71,7 +71,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tests" id="rA4-p7-rMz"/>
+                    <tabBarItem key="tabBarItem" title="Tests" image="Tests" id="rA4-p7-rMz"/>
                     <connections>
                         <outlet property="testButton" destination="Sjc-eB-L4Z" id="bjm-oO-dEe"/>
                     </connections>
@@ -84,7 +84,7 @@
         <scene sceneID="iSb-yd-f1o">
             <objects>
                 <navigationController definesPresentationContext="YES" id="vzw-aj-nsi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Workflows" id="AeG-EB-MRn"/>
+                    <tabBarItem key="tabBarItem" title="Workflows" image="Workflow" id="AeG-EB-MRn"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XUW-RI-xN0">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -226,7 +226,7 @@
         <scene sceneID="eJJ-rI-7ht">
             <objects>
                 <navigationController definesPresentationContext="YES" id="uTT-jW-f42" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Devices" id="HXj-2d-Nfg"/>
+                    <tabBarItem key="tabBarItem" title="Devices" image="Devices" id="HXj-2d-Nfg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4nF-lj-Utc">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -240,6 +240,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Devices" width="32" height="32"/>
+        <image name="Tests" width="32" height="32"/>
+        <image name="Workflow" width="32" height="32"/>
         <image name="cat" width="124" height="99"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
