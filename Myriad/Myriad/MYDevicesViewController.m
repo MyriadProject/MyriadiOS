@@ -70,9 +70,12 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    MYDeviceCell *cell = (MYDeviceCell *)sender;
-    MYCommandsViewController *vc = (MYCommandsViewController *)segue.destinationViewController;
-    vc.deviceName = cell.deviceName.text;
+    if ([sender isKindOfClass:[MYDeviceCell class]])
+    {
+        MYDeviceCell *cell = (MYDeviceCell *)sender;
+        MYCommandsViewController *vc = (MYCommandsViewController *)segue.destinationViewController;
+        vc.deviceName = cell.deviceName.text;
+    }
 }
 
 @end
