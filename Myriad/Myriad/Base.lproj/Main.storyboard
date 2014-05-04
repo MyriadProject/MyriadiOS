@@ -24,7 +24,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="uTT-jW-f42" kind="relationship" relationship="viewControllers" id="HxK-si-EgY"/>
-                        <segue destination="vzw-aj-nsi" kind="relationship" relationship="viewControllers" id="9Ad-Wb-lYO"/>
                         <segue destination="86C-AW-GPl" kind="relationship" relationship="viewControllers" id="3en-tJ-Rfd"/>
                     </connections>
                 </tabBarController>
@@ -273,7 +272,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="zzO-Mf-i8q" customClass="MYCommandCell">
-                                <rect key="frame" x="20" y="114" width="130" height="130"/>
+                                <rect key="frame" x="20" y="84" width="130" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
