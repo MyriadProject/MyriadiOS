@@ -16,6 +16,7 @@
 @property NSInteger deviceBits;
 
 - (instancetype)initWithJson:(NSDictionary *)json;
+- (instancetype)initWithName:(NSString *)name deviceProtocol:(NSInteger)deviceProtocol deviceHash:(NSString *)deviceHash deviceBits:(NSInteger)deviceBits;
 - (NSString *)description;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "MYNewDeviceController.h"
 #import "MYDevice.h"
+#import "MYDeviceManager.h"
 
 @interface MYNewDeviceController ()
 
@@ -18,15 +19,6 @@
 
 @implementation MYNewDeviceController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -34,11 +26,26 @@
     self.deviceNameField.delegate = self;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    // make sure we have most recent device manager;
+    self.deviceManager = [MYDeviceManager manager];
+}
+
 - (IBAction)learnPressed:(id)sender
 {
     if ([self.deviceName length] > 0)
     {
-        [MYDevice deviceWithName:self.deviceName];
+        // don't overwrite a device with an existing name
+        MYDevice *device = [self.deviceManager deviceWithName:self.deviceName];
+        if (!device)
+        {
+            device = [[MYDevice alloc] initWithName:self.deviceName];
+            [self.deviceManager registerDevice:device];
+        }
+        
         [self.navigationController popViewControllerAnimated:YES];
     }
     else

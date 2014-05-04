@@ -12,17 +12,17 @@
 
 @implementation MYDevice
 
-+ (instancetype)deviceWithName:(NSString*)name
-{
-    NSString *path = [[MYAppDelegate applicationDocumentsDirectory] stringByAppendingPathComponent:name];
-    MYDevice *device = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
-    if (!device)
-    {
-        device = [[MYDevice alloc] initWithName:name];
-        [device archive];
-    }
-    return device;
-}
+//+ (instancetype)deviceWithName:(NSString*)name
+//{
+//    NSString *path = [[MYAppDelegate applicationDocumentsDirectory] stringByAppendingPathComponent:name];
+//    MYDevice *device = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+//    if (!device)
+//    {
+//        device = [[MYDevice alloc] initWithName:name];
+////        [device archive];
+//    }
+//    return device;
+//}
 
 - (instancetype)initWithJson:(NSDictionary *)json
 {
@@ -68,16 +68,6 @@
 {
     [aCoder encodeObject:self.name forKey:@"name"];
     [aCoder encodeObject:self.commands forKey:@"commands"];
-}
-
-- (void)archive
-{
-    NSString* path = [[MYAppDelegate applicationDocumentsDirectory] stringByAppendingPathComponent:self.name];
-    BOOL success = [NSKeyedArchiver archiveRootObject:self toFile:path];
-    if (!success)
-    {
-        NSLog(@"Warning: archive to path: '%@' unsuccesful!", path);
-    }
 }
 
 @end
