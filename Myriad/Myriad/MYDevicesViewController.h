@@ -12,6 +12,4 @@
 
 @interface MYDevicesViewController : UITableViewController
 
-@property (strong, nonatomic) MYDeviceManager *deviceManager;
-
 @end

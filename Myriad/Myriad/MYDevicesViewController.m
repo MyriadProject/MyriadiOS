@@ -27,8 +27,7 @@
 {
     [super viewDidAppear:animated];
     
-    // make sure we have most recent device manager;
-    self.deviceManager = [MYDeviceManager manager];
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
     [self.tableView reloadData];
 }
@@ -42,7 +41,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[self.deviceManager allDevices] count];
+    return [[[MYDeviceManager manager] allDevices] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -51,11 +50,21 @@
     if ([cell isKindOfClass:[MYDeviceCell class]])
     {
         MYDeviceCell *deviceCell = (MYDeviceCell *)cell;
-        MYDevice *device = [[self.deviceManager allDevices] objectAtIndex:indexPath.row];
+        MYDevice *device = [[[MYDeviceManager manager] allDevices] objectAtIndex:indexPath.row];
         deviceCell.deviceName.text = device.name;
     }
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        MYDevice *device = [[[MYDeviceManager manager] allDevices] objectAtIndex:indexPath.row];
+        [[MYDeviceManager manager] unregisterDevice:device];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
 }
 
 @end
