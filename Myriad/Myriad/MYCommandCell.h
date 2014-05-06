@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@class MYCommandCell;
+
+@protocol MYCommandCellDelegate <NSObject>
+
+- (void)commandCellLongPress:(MYCommandCell *)cell;
+
+@end
+
 @interface MYCommandCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) id<MYCommandCellDelegate> delegate;
 
 @end
