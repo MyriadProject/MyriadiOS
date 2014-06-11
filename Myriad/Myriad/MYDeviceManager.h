@@ -21,4 +21,6 @@
 - (MYDevice *)deviceWithName:(NSString *)name;
 - (void)archive;
 - (void) createCommand:(MYCommand *)command inDeviceWithName:(NSString *)name;
+- (void)removeCommand:(MYCommand *)command inDeviceWithName:(NSString *)name;
+
 @end

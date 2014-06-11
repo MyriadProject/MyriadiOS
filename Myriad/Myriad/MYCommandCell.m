@@ -8,16 +8,26 @@
 
 #import "MYCommandCell.h"
 
+@interface MYCommandCell ()
+
+@property (strong, nonatomic) UILongPressGestureRecognizer *longPressRecognizer;
+
+@end
 
 @implementation MYCommandCell
 
-- (id)initWithFrame:(CGRect)frame
+- (void)awakeFromNib
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
+    self.longPressRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
+    [self addGestureRecognizer:self.longPressRecognizer];
+}
+
+- (void)longPress:(UILongPressGestureRecognizer *)gesture
+{
+    if (gesture.state == UIGestureRecognizerStateBegan)
+    {
+        [self.delegate commandCellLongPress:self];
     }
-    return self;
 }
 
 @end

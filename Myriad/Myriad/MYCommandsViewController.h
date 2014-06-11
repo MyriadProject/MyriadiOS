@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MYCommandCell.h"
 
-@interface MYCommandsViewController : UICollectionViewController <UICollectionViewDelegate>
+@interface MYCommandsViewController : UICollectionViewController <UICollectionViewDelegate, MYCommandCellDelegate, UIAlertViewDelegate>
 
 @property (copy, nonatomic) NSString *deviceName;
 
